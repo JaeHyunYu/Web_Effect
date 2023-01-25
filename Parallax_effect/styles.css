@@ -37,6 +37,10 @@ body {
   background: url("base.png") top center;
   background-size: cover;
   transform: translateZ(-1px) scale(2.2);
+  /*
+  scale : 해당 요소의 크기를 지정한 비율만큼 확대/축소
+  */
+
   filter: blur(2px);
 }
 .section1::after {
@@ -46,10 +50,18 @@ body {
   position: absolute;
   background: url("outer-layer-blur.png") top center;
   background-size: cover;
+  /*
+  해당 요소를 다 덮도록 배경이미지 확대/축소
+  */
 }
 .section1 .text {
   top:10%;
   transform: translateZ(-0.5px) scale(1.5,1.6) translate(-33%,10%);
+  /*
+  scale(a,b)
+  가로, 세로크기 비율만큼 확대/축소
+
+  */
 }
 .section2 {
   background: rgb(68,35,19);
@@ -63,6 +75,9 @@ body {
   color:white;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.3),
   5px 5px 70px rgba(255,255,255,0.5);
+  /*
+  test-shadow : multi shadow 효과를 위해 2가지 value 입
+  */
   transform: scale(1,1.1) translate(-50%, 10%);
 }
 
