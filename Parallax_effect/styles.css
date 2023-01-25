@@ -1,0 +1,68 @@
+html {
+  height: 100vh;
+  overflow: hidden;
+  /*overflow hidden : 설정한 크기밖으로 빠져나가는 contents 안보이기*/
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin:0;
+  background: #222;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  /* preserve-3d 자식 element들을 3D 공간에 배치*/
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.section1, .section2 {
+  width:100%;
+  min-height: 100vh;
+  /*
+  height vs min-height
+  height : 설정한 크기보다 넘어서는 contents가 내부에 있을때 크기를 무시하고 튀어나옴
+  min-height : 최소한의 크기는 설정한 값이며, 설정한 크기보다 넘어서면 사이즈가 늘어남
+  */
+  position: relative;
+  transform-style: preserve-3d;
+}
+.section1::before {
+  content:"";
+  /*
+  content : 선택한 요소의 앞이나 뒤에 텍스트, 이미지등을 추가할때 사용
+  content구문은 사이즈 조절이 안되기때문에 하단 background 속성 사용
+  */
+  width:100%;
+  height: 100%;
+  position: absolute;
+  background: url("base.png") top center;
+  background-size: cover;
+  transform: translateZ(-1px) scale(2.2);
+  filter: blur(2px);
+}
+.section1::after {
+  content:"";
+  width:100%;
+  height: 100%;
+  position: absolute;
+  background: url("outer-layer-blur.png") top center;
+  background-size: cover;
+}
+.section1 .text {
+  top:10%;
+  transform: translateZ(-0.5px) scale(1.5,1.6) translate(-33%,10%);
+}
+.section2 {
+  background: rgb(68,35,19);
+}
+.text {
+  top:30%;
+  left:50%;
+  position: absolute;
+  font-family: 'Franklin Gothic Heavy';
+  font-size: 15vw;
+  color:white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3),
+  5px 5px 70px rgba(255,255,255,0.5);
+  transform: scale(1,1.1) translate(-50%, 10%);
+}
+
