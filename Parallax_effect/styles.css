@@ -29,7 +29,7 @@ body {
   content:"";
   /*
   content : 선택한 요소의 앞이나 뒤에 텍스트, 이미지등을 추가할때 사용
-  content구문은 사이즈 조절이 안되기때문에 하단 background 속성 사용
+  content구문은 사이즈 조절이 안되기ㅅ 때문에 하단 background 속성 사용
   */
   width:100%;
   height: 100%;
