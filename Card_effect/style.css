@@ -1,0 +1,175 @@
+
+.menu{
+    position:fixed;
+    right: 0;
+    margin-right: 100px;
+    margin-top:100px;
+    
+}
+  .menu-toggler {
+    position: absolute;
+margin-top: -20px;
+    width:40px;
+    height:40px;
+    z-index:2;
+    opacity:0;
+    cursor:pointer;
+  }
+  .menu-toggler:hover + label,
+  .menu-toggler:hover + label:before,
+  .menu-toggler:hover + label:after,{
+    background: white;
+  }
+  .menu-toggler:checked + label {
+    background: transparent;
+  }
+  .menu-toggler:checked + label:before,
+  .menu-toggler:checked + label:after,{
+    top:0;
+    width:40px;
+    transform-origin: 50% 50%;
+  }
+  .menu-toggler:checked + label:before {
+    transform: rotate(45deg) translateY(-15px) translateX(-15px);
+  }
+  .menu-toggler:checked + label:after {
+    transform: rotate(-45deg);
+  }
+  .menu-toggler:checked ~ ul .menu-item { 
+    opacity: 1;
+  }
+  .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+    transform: rotate(90deg) translate(-70px);
+  }
+  .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+    transform: rotate(180deg) translateX(-70px);
+  }
+  .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+    transform: rotate(270deg) translateX(-70px);
+  }
+  .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+    transform: rotate(0deg) translateX(-70px);
+  }
+  .menu-toggler:checked ~ ul .menu-item a {
+    pointer-events:auto;
+  }
+  .menu-toggler + label {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 2.5px;
+    background: white;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .menu-toggler + label:before,
+  .menu-toggler + label:after {
+    width: 40px;
+    height: 5px;
+    display: block;
+    z-index: 1;
+    border-radius: 2.5px;
+    background: white;
+    transition: transform 0.5s top 0.5s;
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+  }
+  .menu-toggler + label:before {
+    top: 10px;
+  }
+  .menu-toggler + label:after {
+    top: -10px;
+  }
+  .menu-item:nth-child(1) a {
+    transform: rotate(-90deg);
+  }
+  .menu-item:nth-child(2) a {
+    transform: rotate(-180deg);
+  }
+  .menu-item:nth-child(3) a {
+    transform: rotate(-270deg);
+  }
+  .menu-item:nth-child(4) a {
+    transform: rotate(0deg);
+  }
+
+  .menu-item {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .menu-item a {
+    display: block;
+    width: inherit;
+    height: inherit;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(230, 230, 250, 0.7);
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    pointer-events: none;
+    transition: 0.2s;
+  }
+  .menu-item a:hover {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 44.44px
+  }
+
+
+body{
+    margin:0;
+    background-color: #f1f1f2;
+    z-index: -5;
+
+}
+
+.bg{
+    margin:0px;
+    height: 100%;
+    width: 100vw;
+    background-image: url(toronto.jpg);
+    background-color: #bcbabe;
+    background-blend-mode: screen;
+    clip-path: polygon(21% 0, 100% 0, 100% 80%, 93% 100%, 5% 100%, 0 80%, 0 12%);
+    position:fixed;
+    z-index:-4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
